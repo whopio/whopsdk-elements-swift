@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.6] - 2025-11-12
+
+### Changed
+- limit debugging output
+
+### Fixed
+- ledger account status not properly fetched
+
 ## [0.0.5] - 2025-11-12
 
 ### Changed

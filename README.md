@@ -8,8 +8,21 @@ Add `WhopPayments` to your Swift Package Manager dependencies and pin it to the 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-payments-swift.git", exact: "0.0.4")
+    .package(url: "https://github.com/whopio/whopsdk-payments-swift.git", exact: "0.0.6")
 ]
+```
+
+## Add the following usage descriptions
+
+To allow native KYC, the SDK requires your app to add the following usage descriptions to `Info.plist`. Without them the SDK will not work.
+
+```
+<key>NSCameraUsageDescription</key>
+<string>We use your camera to let you take photos, record videos, and ID verification.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>We use your microphone so you can record and share audio, and ID verification.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>We use your photo library so you can select and share photos or videos from your library.</string>
 ```
 
 ## Integration Example
