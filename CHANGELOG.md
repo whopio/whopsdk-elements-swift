@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.7] - 2025-11-14
+
+### Added
+- allow resetting ledger account and restart KYC
+- show minimum withdrawals
+- set third party name
+
+### Fixed
+- refresh ledger after withdrawal
+- keep withdrawal amount when switching methods
+
 ## [0.0.6] - 2025-11-12
 
 ### Changed
@@ -38,6 +49,8 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.7]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.7
+[0.0.6]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.6
 [0.0.5]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.5
 [0.0.4]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.4
 [0.0.3]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.3

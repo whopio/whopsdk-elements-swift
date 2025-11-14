@@ -54,6 +54,7 @@ struct MyApp: App {
         WindowGroup {
             WhopPayoutsView(
                 tokenProvider,
+                thirdPartyClient: "your company name",
                 companyId: "company_id",
                 ledgerAccountId: "ledger_account_id"
             )
