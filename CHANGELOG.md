@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.8] - 2025-12-01
+
+### Fixed
+- prevent cumulative fees when filtering payout destinations
+
 ## [0.0.7] - 2025-11-14
 
 ### Added
@@ -49,6 +54,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.8]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.8
 [0.0.7]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.7
 [0.0.6]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.6
 [0.0.5]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.5
