@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.10] - 2025-12-03
+
+### Changed
+- updated KYC with phone number field
+- updated RMI for iOS 26
+
 ## [0.0.9] - 2025-12-02
 
 ### Changed
@@ -65,6 +71,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.10]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.10
 [0.0.9]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.9
 [0.0.8]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.8
 [0.0.7]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.7
