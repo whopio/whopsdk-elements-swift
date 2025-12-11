@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.11] - 2025-12-10
+
+### Added
+- adding markup fees to withdrawal details
+
+### Changed
+- updated KYC UX (navigation, input masking)
+
 ## [0.0.10] - 2025-12-03
 
 ### Changed
@@ -71,6 +79,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.11]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.11
 [0.0.10]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.10
 [0.0.9]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.9
 [0.0.8]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.8
