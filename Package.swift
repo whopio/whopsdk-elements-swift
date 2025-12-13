@@ -25,7 +25,6 @@ let package = Package(
             name: "Bootstrap",
             dependencies: [
                 "Framework",
-                "SardineSDK",
                 .product(name: "NewRelic", package: "newrelic-ios-agent-spm"),
                 .product(name: "Veriff", package: "veriff-ios-spm"),
                 .product(name: "Statsig", package: "ios-sdk"),
@@ -37,13 +36,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-payments-swift/releases/download/0.0.11/WhopPayments.xcframework.zip",
-            checksum: "37e0de4b2a0d5c2c6639091e7ea6087fe6340e7e214b3c6602bc51ec1657d1be"
-        ),
-        .binaryTarget(
-            name: "SardineSDK",
-            url: "https://github.com/whopio/whopsdk-payments-swift/releases/download/0.0.11/MobileIntelligence.xcframework.zip",
-            checksum: "ae06dfe2524e8077ed8916a4e2930bfba3759eace28b21f2cfd1155f2cfc93d2"
+            url: "https://github.com/whopio/whopsdk-payments-swift/releases/download/0.0.12/WhopPayments.xcframework.zip",
+            checksum: "87c686936bb447e094a87814c52dda492922428a381dd92231d720304bfb3c6f"
         ),
     ]
 )

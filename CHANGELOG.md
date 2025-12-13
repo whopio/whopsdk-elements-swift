@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.12] - 2025-12-12
+
+### Changed
+- removed conditional dependencies
+
 ## [0.0.11] - 2025-12-10
 
 ### Added
@@ -79,6 +84,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.12]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.12
 [0.0.11]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.11
 [0.0.10]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.10
 [0.0.9]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.9
