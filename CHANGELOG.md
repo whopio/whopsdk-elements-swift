@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.13] - 2025-12-16
+
+### Added
+- ability to restart KYC
+
+### Changed
+- improved keyboard navigation
+
 ## [0.0.12] - 2025-12-12
 
 ### Changed
@@ -84,6 +92,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.13]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.13
 [0.0.12]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.12
 [0.0.11]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.11
 [0.0.10]: https://github.com/whopio/whopsdk-payments-swift/releases/tag/0.0.10
