@@ -8,7 +8,7 @@ Add `WhopPayments` to your Swift Package Manager dependencies and pin it to the 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-payments-swift.git", exact: "0.0.13")
+    .package(url: "https://github.com/whopio/whopsdk-payments-swift.git", exact: "0.0.14")
 ]
 ```
 
