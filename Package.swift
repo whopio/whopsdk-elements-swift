@@ -2,13 +2,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "WhopPayments",
+    name: "WhopElements",
     platforms: [
         .iOS(.v17),
     ],
     products: [
         .library(
-            name: "WhopPayments",
+            name: "WhopElements",
             targets: ["Bootstrap"]
         ),
     ],
@@ -17,8 +17,7 @@ let package = Package(
         .package(url: "https://github.com/veriff/veriff-ios-spm.git", from: "8.8.0"),
         .package(url: "https://github.com/statsig-io/ios-sdk.git", from: "1.54.0"),
         .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.2.0")),
-        .package(url: "https://github.com/Giphy/giphy-ios-sdk.git", .upToNextMajor(from: "2.2.7")),
-        .package(url: "https://github.com/privy-io/privy-ios", .upToNextMajor(from: "2.7.0")),
+        .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.4.3")),
     ],
     targets: [
         .target(
@@ -29,15 +28,14 @@ let package = Package(
                 .product(name: "Veriff", package: "veriff-ios-spm"),
                 .product(name: "Statsig", package: "ios-sdk"),
                 .product(name: "MuxPlayerSwift", package: "mux-player-swift"),
-                .product(name: "GiphyUISDK", package: "giphy-ios-sdk"),
-                .product(name: "Privy", package: "privy-ios"),
+                .product(name: "LinkKit", package: "plaid-link-ios-spm"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-payments-swift/releases/download/0.0.14/WhopPayments.xcframework.zip",
-            checksum: "798709b39cf3fd56ebda5ff7ee77e0d6cc7199a25f19014affaf3faf41f4f60c"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.15/WhopElements.xcframework.zip",
+            checksum: "ed97d3dbaa922626642b0657d5a28012927091a858e4ef40d832a9313e34ad20"
         ),
     ]
 )
