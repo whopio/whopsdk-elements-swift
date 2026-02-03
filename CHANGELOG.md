@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.0.15] - 2026-02-03
+## [0.0.16] - 2026-02-03
 
 ### Added
 - WhopChatView for real-time chat messaging with iMessage and Discord styles
@@ -10,6 +10,10 @@
 
 ### Changed
 - Updated README with documentation for all SDK features
+
+## 0.0.15 - 2026-02-03
+
+_Release yanked due to missing dependencies_
 
 ## [0.0.14] - 2025-12-17
 
@@ -111,7 +115,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
-[0.0.15]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.15
+[0.0.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.16
 [0.0.14]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.14
 [0.0.13]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.13
 [0.0.12]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.12

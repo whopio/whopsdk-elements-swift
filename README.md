@@ -6,13 +6,15 @@ The `WhopElements SDK` provides a simple way to integrate Whop's features into y
 - **WhopChatView** - Real-time chat messaging
 - **WhopDMsListView** - Direct messages list
 
+For full documentation, visit [docs.whop.com](https://docs.whop.com/developer/guides/ios/installation#whopelements-embedded-chat-payouts).
+
 ## Install
 
 Add `WhopElements` to your Swift Package Manager dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.15")
+    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.16")
 ]
 ```
 

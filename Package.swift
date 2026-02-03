@@ -18,6 +18,7 @@ let package = Package(
         .package(url: "https://github.com/statsig-io/ios-sdk.git", from: "1.54.0"),
         .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.4.3")),
+        .package(url: "https://github.com/livekit/client-sdk-swift.git", .upToNextMinor(from: "2.7.2")),
     ],
     targets: [
         .target(
@@ -29,13 +30,14 @@ let package = Package(
                 .product(name: "Statsig", package: "ios-sdk"),
                 .product(name: "MuxPlayerSwift", package: "mux-player-swift"),
                 .product(name: "LinkKit", package: "plaid-link-ios-spm"),
+                .product(name: "LiveKit", package: "client-sdk-swift"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.15/WhopElements.xcframework.zip",
-            checksum: "ed97d3dbaa922626642b0657d5a28012927091a858e4ef40d832a9313e34ad20"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.16/WhopElements.xcframework.zip",
+            checksum: "482f97be1c42b8838da6e69c0ed7d54a7c6a463cc923b8b298273c84afdbacf7"
         ),
     ]
 )
