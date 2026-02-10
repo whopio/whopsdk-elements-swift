@@ -118,8 +118,8 @@ struct WhopChatExample: View {
             style: .imessage,
             onEvent: { event in
                 switch event {
-                case let .profileTap(username):
-                    print("Profile tapped: \(username)")
+                case let .profileTap(username, userId):
+                    print("Profile tapped: \(username), userId: \(userId)")
                 case let .urlTap(url):
                     print("URL tapped: \(url)")
                 case let .messageSent(content):
@@ -148,7 +148,7 @@ struct WhopChatExample: View {
 
 ```swift
 public enum ChatEvent {
-    case profileTap(username: String)  // User tapped a profile
+    case profileTap(username: String, userId: String)  // User tapped a profile
     case urlTap(url: URL)              // User tapped a link
     case messageSent(content: String)  // User sent a message
 }

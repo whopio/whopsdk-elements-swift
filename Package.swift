@@ -19,6 +19,7 @@ let package = Package(
         .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.4.3")),
         .package(url: "https://github.com/livekit/client-sdk-swift.git", .upToNextMinor(from: "2.7.2")),
+        .package(url: "https://github.com/privy-io/privy-ios", exact: "2.9.0-beta.1"),
     ],
     targets: [
         .target(
@@ -31,13 +32,14 @@ let package = Package(
                 .product(name: "MuxPlayerSwift", package: "mux-player-swift"),
                 .product(name: "LinkKit", package: "plaid-link-ios-spm"),
                 .product(name: "LiveKit", package: "client-sdk-swift"),
+                .product(name: "Privy", package: "privy-ios"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.16/WhopElements.xcframework.zip",
-            checksum: "482f97be1c42b8838da6e69c0ed7d54a7c6a463cc923b8b298273c84afdbacf7"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.17/WhopElements.xcframework.zip",
+            checksum: "7b86879bd858e341955d626acdc66fbc0e0868b8d933f10cfa7a485378a0f586"
         ),
     ]
 )

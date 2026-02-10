@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.17] - 2026-02-10
+
+### Added
+- Scope DMs list with companyId
+- Custom redirect URI for OAuth configuration
+- Prefill OAuth tokens
+- Custom empty state in DMs list
+
 ## [0.0.16] - 2026-02-03
 
 ### Added
@@ -115,6 +123,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.17
 [0.0.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.16
 [0.0.14]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.14
 [0.0.13]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.13
