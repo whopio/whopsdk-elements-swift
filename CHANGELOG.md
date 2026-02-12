@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.18] - 2026-02-12
+
+### Added
+- Support for search
+- Theming support
+
+### Fixed
+- DMs list race condition
+
 ## [0.0.17] - 2026-02-10
 
 ### Added
@@ -123,6 +132,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.18]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.18
 [0.0.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.17
 [0.0.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.16
 [0.0.14]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.14
