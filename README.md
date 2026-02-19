@@ -14,7 +14,7 @@ Add `WhopElements` to your Swift Package Manager dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.16")
+    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.19")
 ]
 ```
 

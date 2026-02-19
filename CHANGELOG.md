@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.19] - 2026-02-18
+
+### Added
+- Experience tap event in chat
+- OAuth prompt login and none options
+- Support chats in scoped DMs
+- Finance balance updates
+
+### Fixed
+- Glass toolbar lag
+
 ## [0.0.18] - 2026-02-12
 
 ### Added
@@ -132,6 +143,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.0.19]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.19
 [0.0.18]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.18
 [0.0.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.17
 [0.0.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.16
