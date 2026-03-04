@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.0.20] - 2026-03-03
+## [0.0.21] - 2026-03-04
 
 ### Added
 - Incremental xcframework builds with simulator/device slices
@@ -10,6 +10,10 @@
 - Repeated SDK initialization causing cascade errors & auto-logout
 - OAuth double continuation crash
 - Duplicate font registration errors
+
+## 0.0.20 - 2026-03-03
+
+_Release yanked due to duplicated xcframework_
 
 ## [0.0.19] - 2026-02-18
 
@@ -154,7 +158,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
-[0.0.20]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.20
+[0.0.21]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.21
 [0.0.19]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.19
 [0.0.18]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.18
 [0.0.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.17
