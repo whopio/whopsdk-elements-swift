@@ -1,10 +1,10 @@
-// swift-tools-version:5.10
+// swift-tools-version: 6.0
 import PackageDescription
 
 let package = Package(
     name: "WhopElements",
     platforms: [
-        .iOS(.v17),
+        .iOS(.v18),
     ],
     products: [
         .library(
@@ -38,8 +38,9 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.19/WhopElements.xcframework.zip",
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.20/WhopElements.xcframework.zip",
             checksum: "563ca14cc064eb00667e9f6d7c532bf1c67a439f409e6bd3e729015740155564"
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v5]
 )

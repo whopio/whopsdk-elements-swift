@@ -14,7 +14,7 @@ Add `WhopElements` to your Swift Package Manager dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.19")
+    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.20")
 ]
 ```
 
@@ -255,6 +255,6 @@ var body: some View {
 
 ## Requirements
 
-- iOS 17.0+
+- iOS 18.0+
 - Xcode 16.4+
 - Swift 5.10+
