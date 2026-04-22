@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.0] - 2026-04-23
+
+### Added
+- Support for company scoped user profiles
+
 ## [0.0.21] - 2026-03-04
 
 ### Added

@@ -15,11 +15,13 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/newrelic/newrelic-ios-agent-spm.git", from: "7.5.11"),
         .package(url: "https://github.com/veriff/veriff-ios-spm.git", from: "8.8.0"),
-        .package(url: "https://github.com/statsig-io/ios-sdk.git", from: "1.54.0"),
+        .package(url: "https://github.com/statsig-io/statsig-kit.git", from: "1.62.4"),
         .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.4.3")),
-        .package(url: "https://github.com/livekit/client-sdk-swift.git", .upToNextMinor(from: "2.7.2")),
+        .package(url: "https://github.com/livekit/client-sdk-swift.git", .upToNextMinor(from: "2.13.0")),
         .package(url: "https://github.com/privy-io/privy-ios", exact: "2.9.0-beta.1"),
+        .package(url: "https://github.com/intercom/intercom-ios-sp.git", .upToNextMajor(from: "19.5.6")),
+        .package(url: "https://github.com/SumSubstance/IdensicMobileSDK-iOS.git", .upToNextMajor(from: "1.42.0")),
     ],
     targets: [
         .target(
@@ -28,18 +30,20 @@ let package = Package(
                 "Framework",
                 .product(name: "NewRelic", package: "newrelic-ios-agent-spm"),
                 .product(name: "Veriff", package: "veriff-ios-spm"),
-                .product(name: "Statsig", package: "ios-sdk"),
+                .product(name: "Statsig", package: "statsig-kit"),
                 .product(name: "MuxPlayerSwift", package: "mux-player-swift"),
                 .product(name: "LinkKit", package: "plaid-link-ios-spm"),
                 .product(name: "LiveKit", package: "client-sdk-swift"),
                 .product(name: "Privy", package: "privy-ios"),
+                .product(name: "Intercom", package: "intercom-ios-sp"),
+                .product(name: "IdensicMobileSDK", package: "IdensicMobileSDK-iOS"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.0.21/WhopElements.xcframework.zip",
-            checksum: "e5b4ee58ea87637d3e517107463342bacf814f6ef4d00ad3e0764b77e7d2c71c"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.0/WhopElements.xcframework.zip",
+            checksum: "1532feb819dd4732c6a8b736f560acb6732d789b0fea8f33b59d7d25125c8055"
         ),
     ],
     swiftLanguageModes: [.v5]
