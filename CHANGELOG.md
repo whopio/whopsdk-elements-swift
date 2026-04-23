@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.1] - 2026-04-23
+
+### Fixed
+- Company scoped user profiles in subcompanies
+
 ## [0.1.0] - 2026-04-23
 
 ### Added
@@ -163,6 +168,8 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.1]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.1
+[0.1.0]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.0
 [0.0.21]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.21
 [0.0.19]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.19
 [0.0.18]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.18
