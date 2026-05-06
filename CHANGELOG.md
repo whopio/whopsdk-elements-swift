@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2] - 2026-05-06
+
+### Added
+- Event when a message is deleted
+
+### Fixed
+- Black rectangles when deleting a message
+- Top of chat showing a progress view instead of being immediate
+
 ## [0.1.1] - 2026-04-23
 
 ### Fixed
@@ -168,6 +177,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.2]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.2
 [0.1.1]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.1
 [0.1.0]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.0
 [0.0.21]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.0.21
