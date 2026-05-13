@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.3] - 2026-05-13
+
+### Added
+- Quick scroll to pinned messages in chat
+- Support for multi-platform chat message rendering (resizing)
+
+### Changed
+- Improved system message styling in chat
+
+### Fixed
+- Blank or clipped pinned-message skeletons in chat
+- Chat cell rendering performance
+- Payout verification and RMI flows
+- Blocked payout file submissions and duplicate compliance banners
+- Misleading instant payout and reserve restriction errors
+
 ## [0.1.2] - 2026-05-06
 
 ### Added
@@ -177,6 +193,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.3]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.3
 [0.1.2]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.2
 [0.1.1]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.1
 [0.1.0]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.0
