@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.4] - 2026-06-09
+
+### Added
+- Support for showing channels in the DMs list (disabled by default)
+
+### Fixed
+- Lots of performance improvements in very active chats and scrolling
+
 ## [0.1.3] - 2026-05-13
 
 ### Added
@@ -193,6 +201,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.4]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.4
 [0.1.3]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.3
 [0.1.2]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.2
 [0.1.1]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.1

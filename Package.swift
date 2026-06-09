@@ -21,6 +21,7 @@ let package = Package(
         .package(url: "https://github.com/privy-io/privy-ios", exact: "2.9.0-beta.1"),
         .package(url: "https://github.com/intercom/intercom-ios-sp.git", .upToNextMajor(from: "19.5.7")),
         .package(url: "https://github.com/SumSubstance/IdensicMobileSDK-iOS.git", .upToNextMajor(from: "1.42.0")),
+        .package(url: "https://github.com/TomaszLizer/stripe-terminal-ios-spm.git", .upToNextMajor(from: "5.5.0")),
         .package(url: "https://github.com/whopio/frosted-ui-swift.git", from: "0.6.1"),
     ],
     targets: [
@@ -36,14 +37,15 @@ let package = Package(
                 .product(name: "Privy", package: "privy-ios"),
                 .product(name: "Intercom", package: "intercom-ios-sp"),
                 .product(name: "IdensicMobileSDK", package: "IdensicMobileSDK-iOS"),
+                .product(name: "StripeTerminal", package: "stripe-terminal-ios-spm"),
                 .product(name: "FrostedUI", package: "frosted-ui-swift"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.3/WhopElements.xcframework.zip",
-            checksum: "aa3a397cb64a3efb49da27a652366aa210f10df9e3a40a864456876d86642c50"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.4/WhopElements.xcframework.zip",
+            checksum: "2ece73d852fc385561ea3403e1531787b9b4a4d11fa6dfaf729b9106ce93e22d"
         ),
     ],
     swiftLanguageModes: [.v5]
