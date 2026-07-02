@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.5] - 2026-07-02
+
+### Added
+- `showBackground` option on `WhopChatView`, defaulting to `true`
+- Prefetching for top channels in the DMs list
+
+### Changed
+- Reduced the distributed WhopElements framework size
+
 ## [0.1.4] - 2026-06-09
 
 ### Added
@@ -201,6 +210,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.5]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.5
 [0.1.4]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.4
 [0.1.3]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.3
 [0.1.2]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.2

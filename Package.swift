@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/newrelic/newrelic-ios-agent-spm.git", from: "7.5.11"),
+        .package(url: "https://github.com/newrelic/newrelic-ios-agent-spm.git", from: "7.7.2"),
         .package(url: "https://github.com/statsig-io/statsig-kit.git", from: "1.62.4"),
         .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.4.3")),
@@ -44,8 +44,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.4/WhopElements.xcframework.zip",
-            checksum: "2ece73d852fc385561ea3403e1531787b9b4a4d11fa6dfaf729b9106ce93e22d"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.5/WhopElements.xcframework.zip",
+            checksum: "f8efe9d69d8ad576310a346345760a4cd767f40c02369aca91032867cd7da7e4"
         ),
     ],
     swiftLanguageModes: [.v5]
