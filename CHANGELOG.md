@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6] - 2026-07-03
+
+### Added
+- Customizable context menus for chat messages and the DMs list — reorder, remove, replace, or add your own items and submenus via `WhopContextMenu` (`.automatic`, `.customizing`, `.replacingAll`)
+- `channelKind` on `WhopChatView` to declare the channel type (direct message, group, experience, or support ticket)
+- `WhopDMsListStyle` to toggle the filters and search bar in the DMs list
+
 ## [0.1.5] - 2026-07-02
 
 ### Added
@@ -210,6 +217,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.6]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.6
 [0.1.5]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.5
 [0.1.4]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.4
 [0.1.3]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.3
