@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.7] - 2026-07-20
+
+### Fixed
+- Send arrow contrast across custom chat themes
+- DMs list rows jumping when the list first appears
+
 ## [0.1.6] - 2026-07-03
 
 ### Added
@@ -217,6 +223,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.7]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.7
 [0.1.6]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.6
 [0.1.5]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.5
 [0.1.4]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.4
