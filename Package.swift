@@ -44,8 +44,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.8/WhopElements.xcframework.zip",
-            checksum: "cec647a32bfeddca5e1b1faf51b39d8afbbe10304e9e4894dbf0c2d11165b600"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.9/WhopElements.xcframework.zip",
+            checksum: "5de4a920d723c3d319f4dfad75c69e8655a510307e2cfabe958c9ceba65df30f"
         ),
     ],
     swiftLanguageModes: [.v5]

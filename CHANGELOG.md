@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.9] - 2026-07-27
+
+### Fixed
+- Bug fixes and performance improvements
+
 ## [0.1.8] - 2026-07-22
 
 ### Fixed
@@ -228,6 +233,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.9]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.9
 [0.1.8]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.8
 [0.1.7]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.7
 [0.1.6]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.6
