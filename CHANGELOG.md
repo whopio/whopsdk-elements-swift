@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.11] - 2026-08-05
+
+### Fixed
+- Chat reply input height updates
+- Pull to refresh in the DMs list
+
 ## [0.1.10] - 2026-07-30
 
 ### Fixed
@@ -238,6 +244,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.11]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.11
 [0.1.10]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.10
 [0.1.9]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.9
 [0.1.8]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.8
