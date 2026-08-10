@@ -38,6 +38,9 @@ The SDK supports two authentication methods depending on which features you use:
 | Feature | Auth Method | Use Case |
 |---------|-------------|----------|
 | **WhopPayoutsView** | Token Provider | Backend-generated tokens for your company |
+| **BalanceElement** | Token Provider | Backend-generated tokens for your company |
+| **ListElement** | Token Provider | Backend-generated tokens for your company |
+| **ActivityElement** | Token Provider | Backend-generated tokens for your company |
 | **WhopChatView** | OAuth | User authentication via Whop login |
 | **WhopDMsListView** | OAuth | User authentication via Whop login |
 
@@ -91,6 +94,73 @@ struct WhopPayoutsExample: View {
 | `companyId` | Your Whop company ID (biz_xxx) |
 | `ledgerAccountId` | The ledger account ID (ldgr_xxx) |
 | `currency` | Currency code, defaults to "usd" |
+
+---
+
+## Wallet Components
+
+Three views onto a company ledger: the total-balance chart, the balance list, and the
+activity feed. They authenticate the same way as `WhopPayoutsView` — a company access token
+supplied through `WhopSDK.configure(tokenProvider:)` — and compose freely, so you can build a
+full balance screen or drop in a single piece.
+
+### Example
+
+```swift
+import SwiftUI
+import WhopElements
+
+struct WalletExample: View {
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                BalanceElement(accountId: "biz_xxxxxxxx")
+
+                ListElement(accountId: "biz_xxxxxxxx") { balance in
+                    print(balance.displayName, balance.amountUsd)
+                }
+
+                ActivityElement(accountId: "biz_xxxxxxxx") { activity in
+                    print(activity.title, activity.amount)
+                }
+            }
+            .padding(16)
+        }
+        .task {
+            await WhopSDK.configure(tokenProvider: WalletTokenProvider())
+        }
+    }
+}
+```
+
+### BalanceElement
+
+Total balance over time, with the headline value, period delta, and 1D/1W/1M/1Y/ALL range
+pills. Press and hold the chart to scrub; the headline follows the bucket under your finger.
+
+| Parameter | Description |
+|-----------|-------------|
+| `accountId` | Whose money the view reads: a company's `biz_…` tag or a user's own `user_…` tag |
+| `currency` | Currency code, defaults to "usd" |
+
+### ListElement
+
+The ledger's fiat and crypto balances, sorted by USD value.
+
+| Parameter | Description |
+|-----------|-------------|
+| `accountId` | Whose money the view reads: a company's `biz_…` tag or a user's own `user_…` tag |
+| `onBalanceSelected` | Called with the tapped `WalletBalance`. Omit it to render the list non-interactively |
+
+### ActivityElement
+
+The company's posted activity, paged as it scrolls. Loading, empty and error states are built in.
+
+| Parameter | Description |
+|-----------|-------------|
+| `accountId` | A company's `biz_…` tag or a user's own `user_…` tag |
+| `showsTitle` | Renders the "Activity" heading, defaults to `true` |
+| `onActivitySelected` | Called with the tapped `WalletActivity` |
 
 ---
 

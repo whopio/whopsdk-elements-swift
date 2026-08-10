@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12] - 2026-08-10
+
+### Added
+- `BalanceElement` — total balance over time for a company ledger, with the headline value, period delta, scrubbing, and 1D/1W/1M/1Y/ALL range pills
+- `ListElement` — the fiat and crypto balances held on a company ledger, sorted by USD value
+- `ActivityElement` — the posted activity feed for a company, paged as it scrolls
+
 ## [0.1.11] - 2026-08-05
 
 ### Fixed
