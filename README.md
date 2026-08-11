@@ -41,6 +41,7 @@ The SDK supports two authentication methods depending on which features you use:
 | **BalanceElement** | Token Provider | Backend-generated tokens for your company |
 | **ListElement** | Token Provider | Backend-generated tokens for your company |
 | **ActivityElement** | Token Provider | Backend-generated tokens for your company |
+| **AddressElement** | None | Collects an address locally; nothing is read from Whop |
 | **WhopChatView** | OAuth | User authentication via Whop login |
 | **WhopDMsListView** | OAuth | User authentication via Whop login |
 
@@ -161,6 +162,74 @@ The company's posted activity, paged as it scrolls. Loading, empty and error sta
 | `accountId` | A company's `biz_…` tag or a user's own `user_…` tag |
 | `showsTitle` | Renders the "Activity" heading, defaults to `true` |
 | `onActivitySelected` | Called with the tapped `WalletActivity` |
+
+---
+
+## AddressElement
+
+Collects a billing or shipping address. Which fields appear, in what order, which of them are
+required and how the postal code is validated all follow the selected country's format — a
+German address asks for a postal code then a city, a Japanese one for a prefecture, an Irish one
+for an Eircode. The street field suggests addresses as the buyer types; picking one fills the rest.
+The country picker sits at the bottom, where every address form in the app already keeps it, and
+starts on the device's region.
+
+It needs no token, so it renders before (or entirely without) `WhopSDK.configure`.
+
+### Example
+
+```swift
+import SwiftUI
+import WhopElements
+
+struct AddressExample: View {
+    @State private var address = AddressElementController()
+
+    var body: some View {
+        VStack(spacing: 24) {
+            AddressElement(controller: address) { snapshot in
+                print(snapshot.isComplete, snapshot.address.postalCode ?? "")
+            }
+
+            Button("Continue") {
+                let result = address.validate()
+                guard result.isComplete else { return }
+                submit(result.address)
+            }
+            .disabled(!address.isComplete)
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `controller` | An `AddressElementController` to read and validate the address from outside the element |
+| `layout` | `.full` (default) labels every field; `.compact` moves the labels into placeholders |
+| `scope` | `.full` (default) collects the country's whole format; `.minimal` collects country and postal code only |
+| `name` | `.combined` (default) one full-name field, `.split` first and last, or `.none` |
+| `organization` | `.none` (default), `.name`, or `.nameWithType` for a business/individual select |
+| `line2` | `.always` (default), `.toggle` to reveal it with a button, or `.never` |
+| `defaultValues` | A `WhopAddress` to start from; its `country` is ISO2 and beats country detection |
+| `detectCountry` | Start on the device's region, defaults to `true`. Falls back to `countryHint`, then US |
+| `allowedCountries` | Restrict the country picker to these ISO2 codes |
+| `countryHint` | ISO2 fallback for the country chain, e.g. derived from a checkout currency |
+| `autocomplete` | Street suggestions as the buyer types, from MapKit, defaults to `true`. With it on, the city, subdivision and postal-code fields wait until the buyer leaves the street field, picks a suggestion, or taps "Enter address manually"; with it off they are all shown from the start |
+| `onChange` | Called on every edit with a `WhopAddressSnapshot` |
+
+### AddressElementController
+
+| Member | Description |
+|--------|-------------|
+| `validate()` | Validates every field, reveals the errors inline, and returns the snapshot. Never throws |
+| `address` | The current `WhopAddress` |
+| `isComplete` | Whether every field the selected country requires is filled and valid |
+| `snapshot` | The latest `WhopAddressSnapshot`: the address, `isComplete`, and the errors |
+
+`WhopAddress` encodes to the same JSON keys as the web `AddressElement` (`postal_code`,
+`first_name`, ISO2 `country`), so one payload shape works on both platforms.
 
 ---
 

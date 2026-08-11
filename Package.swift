@@ -14,15 +14,16 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/newrelic/newrelic-ios-agent-spm.git", from: "7.7.2"),
-        .package(url: "https://github.com/statsig-io/statsig-kit.git", from: "1.62.4"),
-        .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.2.0")),
-        .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.4.3")),
+        .package(url: "https://github.com/statsig-io/statsig-kit.git", from: "1.62.6"),
+        .package(url: "https://github.com/muxinc/mux-player-swift.git", .upToNextMajor(from: "1.8.1")),
+        .package(url: "https://github.com/muxinc/mux-stats-sdk-avplayer", from: "4.15.0"),
+        .package(url: "https://github.com/plaid/plaid-link-ios-spm.git", .upToNextMajor(from: "6.5.0")),
         .package(url: "https://github.com/livekit/client-sdk-swift.git", .upToNextMinor(from: "2.13.0")),
         .package(url: "https://github.com/privy-io/privy-ios", exact: "2.9.0-beta.1"),
-        .package(url: "https://github.com/intercom/intercom-ios-sp.git", .upToNextMajor(from: "19.5.7")),
-        .package(url: "https://github.com/SumSubstance/IdensicMobileSDK-iOS.git", .upToNextMajor(from: "1.42.0")),
-        .package(url: "https://github.com/TomaszLizer/stripe-terminal-ios-spm.git", .upToNextMajor(from: "5.5.0")),
-        .package(url: "https://github.com/whopio/frosted-ui-swift.git", from: "0.6.1"),
+        .package(url: "https://github.com/intercom/intercom-ios-sp.git", .upToNextMajor(from: "19.7.2")),
+        .package(url: "https://github.com/SumSubstance/IdensicMobileSDK-iOS.git", .upToNextMajor(from: "1.45.1")),
+        .package(url: "https://github.com/TomaszLizer/stripe-terminal-ios-spm.git", .upToNextMajor(from: "5.7.0")),
+        .package(url: "https://github.com/whopio/frosted-ui-swift.git", from: "0.7.4"),
     ],
     targets: [
         .target(
@@ -44,8 +45,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.12/WhopElements.xcframework.zip",
-            checksum: "7c40054acb8eb729463eb5a7a39c74bce40a7f555c8f8649369c075dfc29a67c"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.14/WhopElements.xcframework.zip",
+            checksum: "06f9669ffaddcc1680ea0625029dff4000879dde376c80d48f61a3535838c7d1"
         ),
     ],
     swiftLanguageModes: [.v5]

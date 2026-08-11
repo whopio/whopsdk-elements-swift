@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.14] - 2026-08-11
+
+### Fixed
+- Experience chats in `WhopDMsListView` now show and clear unread indicators correctly
+
+## [0.1.13] - 2026-08-11
+
+### Added
+- `AddressElement` — collects a billing or shipping address on the selected country's own format: its field set and order, its required fields, its subdivision list, and its postal-code validation. Offers address suggestions on the street field, and needs no access token
+- `AddressElementController` — reads and validates an `AddressElement` from outside the view, for a submit button that has to gate on a complete address
+
 ## [0.1.12] - 2026-08-10
 
 ### Added
