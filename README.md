@@ -14,7 +14,7 @@ Add `WhopElements` to your Swift Package Manager dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.0.21")
+    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.1.15")
 ]
 ```
 
@@ -183,11 +183,11 @@ import SwiftUI
 import WhopElements
 
 struct AddressExample: View {
-    @State private var address = AddressElementController()
+    @State private var address = AddressElementManager()
 
     var body: some View {
         VStack(spacing: 24) {
-            AddressElement(controller: address) { snapshot in
+            AddressElement(manager: address) { snapshot in
                 print(snapshot.isComplete, snapshot.address.postalCode ?? "")
             }
 
@@ -206,7 +206,7 @@ struct AddressExample: View {
 
 | Parameter | Description |
 |-----------|-------------|
-| `controller` | An `AddressElementController` to read and validate the address from outside the element |
+| `manager` | An `AddressElementManager` to read and validate the address from outside the element |
 | `layout` | `.full` (default) labels every field; `.compact` moves the labels into placeholders |
 | `scope` | `.full` (default) collects the country's whole format; `.minimal` collects country and postal code only |
 | `name` | `.combined` (default) one full-name field, `.split` first and last, or `.none` |
@@ -219,7 +219,7 @@ struct AddressExample: View {
 | `autocomplete` | Street suggestions as the buyer types, from MapKit, defaults to `true`. With it on, the city, subdivision and postal-code fields wait until the buyer leaves the street field, picks a suggestion, or taps "Enter address manually"; with it off they are all shown from the start |
 | `onChange` | Called on every edit with a `WhopAddressSnapshot` |
 
-### AddressElementController
+### AddressElementManager
 
 | Member | Description |
 |--------|-------------|

@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.15] - 2026-08-13
+
+### Added
+- Mac Catalyst support for WhopElements, including chat, DMs, search, themes, and sign-in
+
+### Fixed
+- Automatic embedding of runtime frameworks and resource bundles for binary package consumers
+
 ## [0.1.14] - 2026-08-11
 
 ### Fixed
@@ -9,7 +17,7 @@
 
 ### Added
 - `AddressElement` — collects a billing or shipping address on the selected country's own format: its field set and order, its required fields, its subdivision list, and its postal-code validation. Offers address suggestions on the street field, and needs no access token
-- `AddressElementController` — reads and validates an `AddressElement` from outside the view, for a submit button that has to gate on a complete address
+- `AddressElementManager` — reads and validates an `AddressElement` from outside the view, for a submit button that has to gate on a complete address
 
 ## [0.1.12] - 2026-08-10
 
@@ -262,6 +270,10 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.15]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.15
+[0.1.14]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.14
+[0.1.13]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.13
+[0.1.12]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.12
 [0.1.11]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.11
 [0.1.10]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.10
 [0.1.9]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.9
