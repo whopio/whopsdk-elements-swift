@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.16] - 2026-08-19
+
+### Fixed
+- Chat emoji, reaction, and attachment controls now use Mac-appropriate popovers and remain open during interaction
+- Message context menus on Mac now include quick reactions and notification submenus with correctly sized icons
+- Chat input no longer applies mobile-only camera and software-keyboard handling on Mac
+
 ## [0.1.15] - 2026-08-13
 
 ### Added
@@ -270,6 +277,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.16
 [0.1.15]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.15
 [0.1.14]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.14
 [0.1.13]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.13
