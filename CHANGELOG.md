@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.17] - 2026-08-24
+
+### Added
+- Drag and drop images, videos, and files into chat on iPad and Mac
+
+### Fixed
+- Experience chats now remain read when new messages arrive while the chat is visible
+- Voice messages now request microphone access correctly on Mac Catalyst
+- Frosted icons now render correctly in binary SDK apps
+
 ## [0.1.16] - 2026-08-19
 
 ### Fixed
@@ -277,6 +287,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.17
 [0.1.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.16
 [0.1.15]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.15
 [0.1.14]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.14
