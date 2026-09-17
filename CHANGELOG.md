@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.18] - 2026-09-17
+
+### Added
+- Photo gallery and camera drawers in the chat attachment menu
+- Draft previews in channel lists
+- Pin indicators beside pinned messages
+
+### Changed
+- Simplified system message styling
+
+### Fixed
+- Chat scroll position and composer alignment when loading messages, dismissing the keyboard, and opening context menus
+- Attachment uploads on unstable connections, including retries for large files
+- Chat remaining blank or resetting after opening attachments on iOS 27
+
 ## [0.1.17] - 2026-08-24
 
 ### Added
@@ -287,6 +302,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.18]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.18
 [0.1.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.17
 [0.1.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.16
 [0.1.15]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.15

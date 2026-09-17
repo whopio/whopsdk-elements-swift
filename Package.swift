@@ -19,7 +19,7 @@ let package = Package(
         .package(url: "https://github.com/intercom/intercom-ios-sp.git", .upToNextMajor(from: "19.7.2")),
         .package(url: "https://github.com/SumSubstance/IdensicMobileSDK-iOS.git", .upToNextMajor(from: "1.45.1")),
         .package(url: "https://github.com/TomaszLizer/stripe-terminal-ios-spm.git", .upToNextMajor(from: "5.7.0")),
-        .package(url: "https://github.com/whopio/frosted-ui-swift.git", exact: "0.7.4"),
+        .package(url: "https://github.com/whopio/frosted-ui-swift.git", from: "0.7.6"),
     ],
     targets: [
         .target(
@@ -39,8 +39,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.17/WhopElements.xcframework.zip",
-            checksum: "030083ebf89492d39b4fda03d4f7d355aab851fee2fb75a4c386aa21422451ec"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.18/WhopElements.xcframework.zip",
+            checksum: "0bc6a1f8be484c22e70133e96dabd81dc924885a321288f79dde1e1c92b96cc2"
         ),
         .binaryTarget(
             name: "NewRelic",
