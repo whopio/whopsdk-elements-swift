@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.19] - 2026-09-24
+
+### Added
+- Optional chat threads with automatic or host-managed presentation
+- Standalone thread views for custom chat integrations
+
 ## [0.1.18] - 2026-09-17
 
 ### Added
@@ -302,6 +308,7 @@ _Release yanked due to github error_
 
 _Initial release._
 
+[0.1.19]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.19
 [0.1.18]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.18
 [0.1.17]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.17
 [0.1.16]: https://github.com/whopio/whopsdk-elements-swift/releases/tag/0.1.16
