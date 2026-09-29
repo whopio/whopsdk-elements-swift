@@ -14,7 +14,7 @@ Add `WhopElements` to your Swift Package Manager dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.1.19")
+    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.1.20")
 ]
 ```
 
@@ -261,6 +261,8 @@ struct WhopChatExample: View {
                     print("Profile tapped: \(username), userId: \(userId)")
                 case let .urlTap(url):
                     print("URL tapped: \(url)")
+                case let .threadOpened(thread):
+                    print("Thread opened: \(thread.parentMessageId)")
                 case let .messageSent(content):
                     print("Message sent: \(content)")
                 }
@@ -289,6 +291,7 @@ struct WhopChatExample: View {
 public enum ChatEvent {
     case profileTap(username: String, userId: String)  // User tapped a profile
     case urlTap(url: URL)              // User tapped a link
+    case threadOpened(WhopChatThread)  // An automatic thread presentation opened
     case messageSent(content: String)  // User sent a message
 }
 ```

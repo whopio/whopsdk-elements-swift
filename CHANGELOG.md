@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.20] - 2026-09-29
+
+### Added
+- Thread-open events for automatically presented chat threads
+- Host-managed navigation for nested chat threads
+
 ## [0.1.19] - 2026-09-24
 
 ### Added
