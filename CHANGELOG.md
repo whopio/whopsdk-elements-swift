@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.21] - 2026-11-03
+
+### Fixed
+- Chat recovery after interrupted initial loads
+- DMs sometimes staying unread
+- Attachment detail controls on macOS
+
 ## [0.1.20] - 2026-09-29
 
 ### Added
