@@ -40,7 +40,7 @@ let package = Package(
         .binaryTarget(
             name: "Framework",
             url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.21/WhopElements.xcframework.zip",
-            checksum: "6b09d6f7399a71b8c1fba62d4d65221a3fdf04275a6c3e20efbec73884c1830e"
+            checksum: "aff3633659ca8c8b5d584a854365550667b2c924acf17a03370b3cc98a6b084e"
         ),
         .binaryTarget(
             name: "NewRelic",
