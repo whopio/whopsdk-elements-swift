@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.22] - 2026-11-04
+
+### Fixed
+- Chat uploads sometimes getting stuck
+
 ## [0.1.21] - 2026-11-03
 
 ### Fixed
