@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.23] - 2026-11-19
+
+### Added
+- `WhopBalanceView` for a company ledger: one currency's balance and breakdown, its activity, and a Withdraw action with payout methods and identity verification
+
+### Changed
+- `WhopPayoutsView` is deprecated. Use `WhopBalanceView`
+- `BalanceElement` and `ListElement` show a company's dollars held on-chain in its USD balance, as `WhopBalanceView` does
+- Frosted UI now comes with the package as a prebuilt framework instead of a source dependency
+
+### Fixed
+- A crash when an OAuth sign-in session fails to start
+
 ## [0.1.22] - 2026-11-04
 
 ### Fixed

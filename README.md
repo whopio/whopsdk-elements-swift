@@ -2,7 +2,7 @@
 
 The `WhopElements SDK` provides a simple way to integrate Whop's features into your iOS application:
 
-- **WhopPayoutsView** - Payouts and withdrawal management
+- **WhopBalanceView** - Company balance, activity and withdrawals
 - **WhopChatView** - Real-time chat messaging
 - **WhopDMsListView** - Direct messages list
 
@@ -14,7 +14,7 @@ Add `WhopElements` to your Swift Package Manager dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.1.22")
+    .package(url: "https://github.com/whopio/whopsdk-elements-swift.git", exact: "0.1.23")
 ]
 ```
 
@@ -31,13 +31,19 @@ The SDK requires the following usage descriptions for KYC and media features:
 <string>We use your photo library so you can select and share photos or videos from your library.</string>
 ```
 
+On Mac Catalyst, chat message **Save image / Save video** actions and the attachment
+download button open the native file export dialog. The user chooses the destination
+(for example, Downloads); macOS manages the dialog's initial location. Sandboxed
+host apps need `com.apple.security.files.user-selected.read-write`. These actions
+do not request Photos access on Mac; iOS continues to save media to Photos.
+
 ## Authentication
 
 The SDK supports two authentication methods depending on which features you use:
 
 | Feature | Auth Method | Use Case |
 |---------|-------------|----------|
-| **WhopPayoutsView** | Token Provider | Backend-generated tokens for your company |
+| **WhopBalanceView** | Token Provider | Backend-generated tokens for your company |
 | **BalanceElement** | Token Provider | Backend-generated tokens for your company |
 | **ListElement** | Token Provider | Backend-generated tokens for your company |
 | **ActivityElement** | Token Provider | Backend-generated tokens for your company |
@@ -47,15 +53,18 @@ The SDK supports two authentication methods depending on which features you use:
 
 ---
 
-## WhopPayoutsView
+## WhopBalanceView
 
-Displays the payouts management interface for withdrawals and earnings.
+Shows one currency balance of a company: the balance with its available, pending and reserve breakdown, the activity in that currency, and a Withdraw action that covers payout methods and identity verification.
 
 ### Setup
 
-1. Generate an access token from your backend using the [Create Access Token API](https://docs.whop.com/api-reference/access-tokens/create-access-token)
+1. Generate an access token for the company from your backend using the [Create Access Token API](https://docs.whop.com/api-reference/access-tokens/create-access-token)
 2. Create a token provider that returns the token
 3. Configure the SDK before displaying the view
+4. Push the view inside a `NavigationStack`. Its back button pops your stack.
+
+The view reads and withdraws with the token you mint. A token created without `scoped_actions` inherits every permission of your API key. If you scope it, include `company:balance:read`, `payout:account:read`, `payout:withdrawal:read`, `payout:destination:read`, `payout:withdraw_funds`, `payout:create_destination`, `payout:update_destination`, `payout:delete_destination`, `identity:read` and `identity:write`. Adding, reconnecting and removing payout methods needs a token minted from a company API key: an app API key cannot hold those three scopes.
 
 ### Example
 
@@ -63,8 +72,8 @@ Displays the payouts management interface for withdrawals and earnings.
 import SwiftUI
 import WhopElements
 
-class PayoutsTokenProvider: WhopTokenProvider {
-    /// For Payouts and Checkout, you can use a token linked to your company.
+class BalanceTokenProvider: WhopTokenProvider {
+    /// For Balance and Checkout, you can use a token linked to your company.
     /// Fetch it in your backend using https://docs.whop.com/api-reference/access-tokens/create-access-token
     func getToken() async -> WhopTokenResponse {
         let token = await fetchAccessToken()
@@ -72,16 +81,20 @@ class PayoutsTokenProvider: WhopTokenProvider {
     }
 }
 
-struct WhopPayoutsExample: View {
+struct WhopBalanceExample: View {
     var body: some View {
-        WhopPayoutsView(
-            thirdPartyClient: "My Company Name",
-            companyId: "biz_xxxxxxxx",
-            ledgerAccountId: "ldgr_xxxxxxxx"
-        )
+        NavigationStack {
+            NavigationLink("Balance") {
+                WhopBalanceView(
+                    thirdPartyClient: "My Company Name",
+                    companyId: "biz_xxxxxxxx",
+                    ledgerAccountId: "ldgr_xxxxxxxx"
+                )
+            }
+        }
         .task {
             // Ideally initialize as early as possible so views don't wait
-            await WhopSDK.configure(tokenProvider: PayoutsTokenProvider())
+            await WhopSDK.configure(tokenProvider: BalanceTokenProvider())
         }
     }
 }
@@ -91,17 +104,23 @@ struct WhopPayoutsExample: View {
 
 | Parameter | Description |
 |-----------|-------------|
-| `thirdPartyClient` | Your company name displayed in the UI |
-| `companyId` | Your Whop company ID (biz_xxx) |
-| `ledgerAccountId` | The ledger account ID (ldgr_xxx) |
-| `currency` | Currency code, defaults to "usd" |
+| `thirdPartyClient` | Your company name, shown in the disclaimer under the activity |
+| `companyId` | The Whop company ID (biz_xxx) |
+| `ledgerAccountId` | The company's ledger account ID (ldgr_xxx) |
+| `currency` | Currency code of the balance to show, defaults to "usd" |
+
+---
+
+## WhopPayoutsView
+
+Deprecated. Use `WhopBalanceView`, which takes the same parameters and token. `WhopPayoutsView` still shows the earlier payouts screen.
 
 ---
 
 ## Wallet Components
 
 Three views onto a company ledger: the total-balance chart, the balance list, and the
-activity feed. They authenticate the same way as `WhopPayoutsView` — a company access token
+activity feed. They authenticate the same way as `WhopBalanceView` — a company access token
 supplied through `WhopSDK.configure(tokenProvider:)` — and compose freely, so you can build a
 full balance screen or drop in a single piece.
 
