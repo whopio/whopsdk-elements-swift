@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.24] - 2026-11-20
+
+### Added
+- Option to hide thread replies in iMessage-style chats
+- Chat translation on Mac
+
+### Changed
+- Redesigned Discord-style chats
+
+### Fixed
+- Chat recovery after authentication refresh
+
 ## [0.1.23] - 2026-11-19
 
 ### Added

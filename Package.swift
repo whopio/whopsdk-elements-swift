@@ -36,8 +36,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Framework",
-            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.23/WhopElements.xcframework.zip",
-            checksum: "c2b8d067f0418383ae356b9fbd4d4b4c84612bec53d6a2870f2c14d0d3867811"
+            url: "https://github.com/whopio/whopsdk-elements-swift/releases/download/0.1.24/WhopElements.xcframework.zip",
+            checksum: "0b7b9ded63412f72f9dbdde546673a8c3ab967135c0e9fd3b5df027aa21cb0d0"
         ),
         .binaryTarget(
             name: "FrostedUI",
